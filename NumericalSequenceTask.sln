@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalSequence", "NumericalSequence\NumericalSequence.csproj", "{A78FECC2-9404-4B16-AE88-7D1662E2AD59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumericalSequanceView", "NumericalSequanceView\NumericalSequanceView.csproj", "{B0F1002B-4853-4546-9EEA-75BE957113C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A78FECC2-9404-4B16-AE88-7D1662E2AD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78FECC2-9404-4B16-AE88-7D1662E2AD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78FECC2-9404-4B16-AE88-7D1662E2AD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78FECC2-9404-4B16-AE88-7D1662E2AD59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F1002B-4853-4546-9EEA-75BE957113C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F1002B-4853-4546-9EEA-75BE957113C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F1002B-4853-4546-9EEA-75BE957113C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F1002B-4853-4546-9EEA-75BE957113C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {374A08B4-2AA8-4A22-9698-727186BA1E19}
+	EndGlobalSection
+EndGlobal
