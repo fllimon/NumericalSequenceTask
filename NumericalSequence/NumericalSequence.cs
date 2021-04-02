@@ -11,40 +11,20 @@ namespace NumericalSequenceLib
     {
         #region ======------ PRIVATE DATA -----======
 
-        private long _numberSequence = -1;
+        private long _numberSequenceStart = -1;
+        private long _numberSequenceFinish = -1;
 
         #endregion
 
         #region ======------ CTOR ------=======
 
-        public NumericalSequence(long numberSequence)
+        public NumericalSequence(long numberSequenceStart, long numberSequenceFinish)
         {
-            _numberSequence = numberSequence;
+            _numberSequenceStart = numberSequenceStart;
+            _numberSequenceFinish = numberSequenceFinish;
         }
 
         #endregion
-
-        #region ======----- PROPERTIES ------=====
-
-        public long NumberSequence
-        {
-            get
-            {
-                return _numberSequence;
-            }
-
-            private set
-            {
-                _numberSequence = value;
-            }
-        }
-
-        #endregion
-
-        public IEnumerable<long> GetSequence()
-        {
-            return this;
-        }
 
         public IEnumerator<long> GetEnumerator()
         {
@@ -59,29 +39,35 @@ namespace NumericalSequenceLib
         private struct NumericalIterator : IEnumerator<long>
         {
             private long _currentValue;
+            private long _numberBeforPower;
             private readonly NumericalSequence _sequence;
             private bool _isPosition;
 
             public NumericalIterator(NumericalSequence sequence)
             {
                 _sequence = sequence;
-                _currentValue = 2;
+                _currentValue = _sequence._numberSequenceStart;
+                _numberBeforPower = _currentValue;
                 _isPosition = false;
             }
 
-            long IEnumerator<long>.Current => _currentValue;
+            long IEnumerator<long>.Current => _numberBeforPower;
 
-            public object Current => _currentValue;
+            public object Current => _numberBeforPower;
 
             public bool MoveNext()
             {
+                _numberBeforPower++;
+                _currentValue = _numberBeforPower;
+
                 if (_isPosition)
                 {
                     _currentValue *= _currentValue;
                 }
-                _isPosition = true;
 
-                return _currentValue < _sequence._numberSequence;
+                _isPosition = true;
+                
+                return _currentValue < _sequence._numberSequenceFinish;
             }
 
             public void Reset()

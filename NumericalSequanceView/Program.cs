@@ -12,14 +12,12 @@ namespace NumericalSequanceView
     {
         static void Main(string[] args)
         {
-            long numberSequence = long.Parse(args[0]);
+            long numberSequenceStart = long.Parse(args[0]);
+            long numberSequenceFinish = long.Parse(args[1]);
 
-            NumericalSequence sequence = new NumericalSequence(numberSequence);
+            NumericalSequence sequence = new NumericalSequence(numberSequenceStart, numberSequenceFinish);
 
-            Console.WriteLine($"Заданное число: {sequence.NumberSequence}");
-            Console.WriteLine();
-
-            foreach (long item in sequence.GetSequence())
+            foreach (long item in sequence)
             {
                 Console.Write($"{item}, ");
             }
